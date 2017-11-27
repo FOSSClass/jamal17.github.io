@@ -1,9 +1,5 @@
 ## Linux permission
 
-You can use the [editor on GitHub](https://github.com/jamal17/jamal17.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-
-
 after we
 explained how to add a new user to Linux system, we must set the permission for
 the users who use the operating system by using their user ID, the user
