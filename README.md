@@ -19,7 +19,11 @@ Permission levels: there are three permission levels and each permission level h
 
 
 
+
+
 **Permission levels**. 
+
+
 
 
 
@@ -35,7 +39,11 @@ Permission levels: there are three permission levels and each permission level h
 
 
 
+
+
 **Permission Types**. 
+
+
 
 
 
@@ -50,7 +58,11 @@ Permission levels: there are three permission levels and each permission level h
 
 
 
+
+
 Permission levels and permission types are always mapped in the following sequence.
+
+
 
 
 
@@ -64,13 +76,18 @@ Permission levels and permission types are always mapped in the following sequen
 
 
 
+
+
 **Viewing and modifying permissions**.
+
 
 
 
 root /h/jamal >>> ls -l /etc/passwd
 
 -rw-r--r-- 1 root root 1425 Nov 19  16:19 /etc/passwd
+
+
 
 
 
@@ -119,24 +136,31 @@ The first character isn’t start with dash, but with the letter ‘d’ because
  
 
 
+
+
 **Changing the permission**:
 
 
 
+
 Linux, like any other operating system, organizes itself by using files and directories that can be accessed, modified, and executed. 
-
 To prevent any internal chaos, Linux gives different levels of permission to interact with those files and directories. 
-
 We must use the command chmod (change mode) to change these permissions. chmod command can change the permission either by using numeric or alphanumeric options, we will start using numeric option.
+
+
 
 
 
 First, let’s begin to create a new file.
 
 
+
 root /h/jamal >>> touch file.sh
+
 root /h/jamal>>> ls -l file.sh
+
 -rw-r--r-- 1 root root 0 Nov 19 19:48 file.sh
+
 
 
 
@@ -145,9 +169,14 @@ As we see the touch command create a new empty file named file.sh. The file has 
 we’ll write some commands a little later. To execute this file, we must add the execute permission. 
 
 
+
 root /h/jamal >>> chmod 755 file.sh
+
 root /h/jamal>>> ls -l file.sh
+
 -rwxr-xr-x 1 root root 0 Nov 19 19:48 file.sh
+
+
 
 
 using chmod, we specify the permissions to be associated with the file and the path to the file. 
@@ -156,12 +185,20 @@ to the user owner, and read and execute permissions to the group owner and other
 
 
 
+
+
+
 The number 755 mean:
 
 
+
 4-read permission granted.
+
 2-write permission granted.
+
 1-Execute permission granted.
+
+
 
 
 
@@ -172,14 +209,21 @@ So, the first number 7 applies to the user, the second number 5 applies to the g
 
 
 
+
 After we see how we can change the permission levels by using numeric option, also we can use the alphanumeric ptions to change the permission levels.
+
 
 
 We will use the same example for the file we create file.sh 
 
+
+
 root /h/jamal >>> chmod u+rwx,g+rx,o+rx file.sh
+
 root /h/jamal >>> ls -l file.sh
+
 -rwxr-xr-x 1 root root 0 Nov 19 19:48 file.sh
+
 
 
 The (+) and (–) sign are used to add or remove the permission, and user is represented by letter (u), group by (g),
@@ -187,13 +231,18 @@ and other by (o).  
 
 
 
+
 After we change the permission to full for the user owner of the empty file we create (file.sh). Now we will execute this
 file by writing something in the file. We will use the command echo.
 
 
+
 root /h/jamal >>> echo “echo hello class” >> file.sh
+
 root /h/jamal >>> ./file.sh
+
 hello class
+
 
 
 
