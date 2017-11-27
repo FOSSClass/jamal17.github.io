@@ -5,6 +5,8 @@ after we explained how to add a new user to Linux system, we must set the permis
 Example, when the accounts group is given access for read only to a certain file, all users in that group will have the same access for read only. This is will be easy than having individually assign permissions to each user in that group, the information for the group will be stored in /etc/group file, each line of this file has the information for the group such as the name of the group, the ID of the group or GID, and the username of the members.
 
 
+
+
 we need to understand how to read the file permission, and how to change their permission. Linux is a multiuser operating system; a user cannot access or modify files or directories if they do not have an access or permission. We will learn how to manage file permission, and how change permission levels in step by step with examples.
 
 
@@ -20,9 +22,15 @@ Permission levels: there are three permission levels and each permission level h
 **Permission levels**. 
 
 
+
+
 - User owner is the user who created that object or designated as user owner by actual owner or root user.
+
 - Group owner is the primary group of user owner or designated group by actual owner or root user.
+
 - All remaining users and groups are considered as others.
+
+
 
 
 
@@ -30,9 +38,14 @@ Permission levels: there are three permission levels and each permission level h
 **Permission Types**. 
 
 
+
 - Read; allows the user to view the contents of a file. 
+
 - Write; allows the user to overwrite to the file or delete it.
+
 - Execute; allows the user to execute the code contained in the file.
+
+
 
 
 
@@ -40,8 +53,11 @@ Permission levels: there are three permission levels and each permission level h
 Permission levels and permission types are always mapped in the following sequence.
 
 
+
 1-User (Read, Write, Execute)
+
 2-Group (Read, Write, Execute)
+
 3-Other (Read, Write, Execute)
 
 
@@ -51,8 +67,11 @@ Permission levels and permission types are always mapped in the following sequen
 **Viewing and modifying permissions**.
 
 
+
 root /h/jamal >>> ls -l /etc/passwd
+
 -rw-r--r-- 1 root root 1425 Nov 19  16:19 /etc/passwd
+
 
 
 
@@ -61,16 +80,22 @@ the user owner with permission for read and write only, but not execute. The nex
 
 
 
+
 To execute the following command:
 
 
+
 root /h/jamal >>> ls -l /bin/ls
+
 -rwxr-xr-x 1 root root 112700 Jan 26  2013 /bin/ls
 
 
 
+
 We see how the permission types change after we execute it, and shows how the permissions associated with the ls
+
 command. The last three characters show the permission for the others (everyone) is allowed to execute the code inside it. 
+
 
 
 
@@ -78,26 +103,31 @@ command. The last three characters show the permission for the others (everyone)
 **Finally, we will execute the following command**:
 
 
+
 root /h/jamal >>> ls -l /
+
 drwxr-xr-x   2 root root 2140 Sep 21 18:09 bin
 
 …….
 
 
 
-The first character isn’t start with dash, but with the letter ‘d’ because we are listing everything in the /
-directory, so the output shows the permission for /bin directory. 
+
+The first character isn’t start with dash, but with the letter ‘d’ because we are listing everything in the / directory, so the output shows the permission for /bin directory. 
 
 
  
 
+
 **Changing the permission**:
 
 
+
 Linux, like any other operating system, organizes itself by using files and directories that can be accessed, modified, and executed. 
+
 To prevent any internal chaos, Linux gives different levels of permission to interact with those files and directories. 
-We must use the command chmod (change mode) to change these permissions. 
-chmod command can change the permission either by using numeric or alphanumeric options, we will start using numeric option.
+
+We must use the command chmod (change mode) to change these permissions. chmod command can change the permission either by using numeric or alphanumeric options, we will start using numeric option.
 
 
 
