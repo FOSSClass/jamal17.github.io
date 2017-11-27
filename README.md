@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Linux permission
 
 You can use the [editor on GitHub](https://github.com/jamal17/jamal17.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
