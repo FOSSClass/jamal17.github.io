@@ -2,7 +2,7 @@
 
 
 after we explained how to add a new user to Linux system, we must set the permission for the users who use the operating system by using their user ID, the user information stored in the text file /etc/passwd, each line of this file contains information about the users of system such as their username, UID, group ID, and their home directory, also we must set the permission for the groups, so all user in the group they will have the same access. 
-Example, when the accounts group is given access for read only to a certain file, all users in that group will have the same access for read only. This is will be easy than having individually assign permissions to each user in that group, the information for the group will be stored in /etc/group file, each line of this file has the information for the group such as the name of the group, the ID of the group or GID, and the username of the members.
+Example, when the students group is given access for read only to a certain file, all users in that group will have the same access for read only. This is will be easy than having individually assign permissions to each user in that group, the information for the group will be stored in /etc/group file, each line of this file has the information for the group such as the name of the group, the ID of the group or GID, and the username of the members.
 
 
 
