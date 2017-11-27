@@ -148,7 +148,6 @@ Finally, execute the following command:
 root /h/jamal >>> ls -l /
 drwxr-xr-x   2 root root 2140 Sep 21 18:09 bin
 
-
 …….
 
 
@@ -166,12 +165,10 @@ directory, so the output shows the permission for /bin directory.
  
 
 
-Changing the
-permission:
+Changing the permission:
 
 
-Linux, like any
-other operating system, organizes itself by using files and directories that
+Linux, like any other operating system, organizes itself by using files and directories that
 can be accessed, modified, and executed. To prevent any internal chaos, Linux
 gives different levels of permission to interact with those files and
 directories. We must use the command chmod (change mode) to change these permissions.
@@ -179,15 +176,11 @@ chmod command can change the permission either by using numeric or alphanumeric
 options, we will start using numeric option.
 
 
-First, let’s
-begin to create a new file.
+First, let’s begin to create a new file.
 
 
 root /h/jamal >>> touch file.sh
-root /h/jamal
->>> ls -l file.sh
-
-
+root /h/jamal>>> ls -l file.sh
 -rw-r--r-- 1 root root 0 Nov 19 19:48 file.sh
 
 
@@ -197,8 +190,8 @@ root /h/jamal
  
 
 
-As we see the touch command create a new
-empty file named file.sh. The file has been created with permissions -rw-r--r--.
+As we see the touch command create a new empty file named file.sh. 
+The file has been created with permissions -rw-r--r--.
 we’ll write some commands a little later. To execute this file, we must add the
 execute permission. 
 
@@ -213,12 +206,10 @@ execute permission.
 
 
 root /h/jamal >>> chmod 755 file.sh
-root /h/jamal
->>> ls -l file.sh
+root /h/jamal>>> ls -l file.sh
 
 
--rwxr-xr-x 1
-root root 0 Nov 19 19:48 file.sh
+-rwxr-xr-x 1 root root 0 Nov 19 19:48 file.sh
 
 
 
@@ -229,9 +220,8 @@ root root 0 Nov 19 19:48 file.sh
  
 
 
-using chmod, we specify the permissions to
-be associated with the file and the path to the file. The permissions here are
-represented by 755. This mean it will gives read, write, and execute permission
+using chmod, we specify the permissions to be associated with the file and the path to the file. 
+The permissions here are represented by 755. This mean it will gives read, write, and execute permission
 to the user owner, and read and execute permissions to the group owner and
 others (everyone). 
 
